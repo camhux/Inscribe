@@ -6,8 +6,8 @@ module.exports = class TextView extends Backbone.View
     'click .toggle-text': -> @displayTranslated = !@displayTranslated; @render()
 
   initialize ->
-    @render()
     @displayTranslated = true
+    @render()
 
   render ->
     data = if @displayTranslated

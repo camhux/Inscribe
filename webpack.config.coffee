@@ -5,3 +5,5 @@ module.exports =
     loaders: [
       'test': /^\.coffee$/, 'loader': 'coffee' 
     ]
+  output:
+    path: __dirname + '/build'
