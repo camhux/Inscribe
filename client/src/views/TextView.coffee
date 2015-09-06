@@ -10,6 +10,12 @@ module.exports = class TextView extends Backbone.View
     @displayTranslated = true
 
   render ->
+    data = if @displayTranslated
+      text: @model.get('romanText')
+      buttonText: 'PROPONO•IN•MODVM•LATINI'
+    else
+      text: @model.get('engText')
+      buttonText: 'Show original'
+
     @$el.empty()
-    buttonText = 'Show original' if @displayTranslated else 'PROPONO•IN•MODVM•LATINI'
-    @$el.html(@template {'text': @model.get('text'), 'buttonText': })
+    @$el.html(@template data)
