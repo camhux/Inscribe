@@ -1,1 +1,2 @@
-window.app = new AppView(model: new AppModel)
+window.app = app = new AppView(model: new AppModel)
+app.$el.appendTo '#main'
