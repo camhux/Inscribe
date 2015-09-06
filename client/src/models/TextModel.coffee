@@ -2,5 +2,5 @@
 
 module.exports = class Text extends Backbone.Model
 
-  initialize: (engText: @engText) ->
+  initialize: ({@engText}) ->
     @romanText = toRoman @engText

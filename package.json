@@ -9,12 +9,13 @@
   "author": "camhux",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^3.2.0",
-    "mocha": "^2.3.0",
-    "webpack": "^1.12.1"
+    "coffee-loader": "^0.7.2",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
     "backbone": "^1.2.3",
+    "coffee-script": "^1.10.0",
     "jquery": "^2.1.4"
   }
 }
