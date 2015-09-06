@@ -9,6 +9,8 @@
   "author": "camhux",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.3.0",
     "webpack": "^1.12.1"
   },
   "dependencies": {

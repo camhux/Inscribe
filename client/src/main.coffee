@@ -1,0 +1,1 @@
+window.app = new AppView(model: new AppModel)

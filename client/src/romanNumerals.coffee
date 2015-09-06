@@ -1,53 +1,55 @@
-window.Number.prototype.toRoman = ->
+exports.toRomanNumeral = (num) ->
   output = ""
-  val = this
   
-  while val >= 1000
+  if num % 1 != 0
+    num = Math.floor(num)
+  
+  while num >= 1000
     output += 'M'
-    val -= 1000
+    num -= 1000
 
-  if val >= 900
+  if num >= 900
     output += 'CM'
-    val -= 900
+    num -= 900
 
-  while val >= 500
+  while num >= 500
     output += 'D'
-    val -= 500
+    num -= 500
 
-  if val >= 400
+  if num >= 400
     output += 'CD'
-    val -= 400
+    num -= 400
 
-  while val >= 100
+  while num >= 100
     output += 'C'
-    val -= 100
+    num -= 100
 
-  if val >= 90
+  if num >= 90
     output += 'XC'
-    val -= 90
+    num -= 90
 
-  if val >= 50
+  if num >= 50
     output += 'L'
-    val -= 50
+    num -= 50
 
-  if val >= 40
+  if num >= 40
     output += 'XL'
-    val -= 40
+    num -= 40
 
-  while val >= 10
+  while num >= 10
     output += 'X'
-    val -= 10
+    num -= 10
 
-  if val >= 9
+  if num >= 9
     output += 'IX'
-    val -= 9
+    num -= 9
 
-  if val >= 5
+  if num >= 5
     output += 'V'
-    val -= 5
+    num -= 5
 
-  while val >= 1
+  while num >= 1
     output += 'I'
-    val -= 1
+    num -= 1
 
   return output
