@@ -1,3 +1,6 @@
+_ = require 'underscore'
+Backbone = require 'backbone'
+
 module.exports = class FieldView extends Backbone.View
 
   template: _.template require './templates/FieldView.html'

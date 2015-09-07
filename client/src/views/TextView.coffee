@@ -1,3 +1,6 @@
+_ = require 'underscore'
+Backbone = require 'backbone'
+
 module.exports = class TextView extends Backbone.View
 
   template: _.template require "./templates/TextView.html"
@@ -5,17 +8,18 @@ module.exports = class TextView extends Backbone.View
   events:
     'click .toggle-text': -> @displayTranslated = !@displayTranslated; @render()
 
-  initialize ->
+  initialize: ->
     @displayTranslated = true
     @render()
 
-  render ->
+  render: ->
+    debugger
     data = if @displayTranslated
       text: @model.get('romanText')
-      buttonText: 'PROPONO•IN•MODVM•LATINI'
+      buttonText: 'Show original'
     else
       text: @model.get('engText')
-      buttonText: 'Show original'
+      buttonText: 'PROPONO•IN•MODVM•LATINI'
 
     @$el.empty()
     @$el.html(@template data)
