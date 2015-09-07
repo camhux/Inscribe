@@ -13,7 +13,6 @@ module.exports = class TextView extends Backbone.View
     @render()
 
   render: ->
-    debugger
     data = if @displayTranslated
       text: @model.get('romanText')
       buttonText: 'Show original'
