@@ -1,5 +1,7 @@
 exports.toRomanNumeral = (num) ->
   output = ""
+
+  if num > 3000 then num = 3000
   
   if num % 1 != 0
     num = Math.floor(num)
